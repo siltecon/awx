@@ -233,7 +233,7 @@ def get_awx_http_client_headers():
     license = get_license().get('license_type', 'UNLICENSED')
     headers = {
         'Content-Type': 'application/json',
-        'User-Agent': '{} {} ({})'.format('Armory' if license == 'open' else 'Red Hat Ansible Automation Platform', get_awx_version(), license),
+        'User-Agent': '{} {} ({})'.format('BundleBuilder' if license == 'open' else 'Red Hat Ansible Automation Platform', get_awx_version(), license),
     }
     return headers
 
